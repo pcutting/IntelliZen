@@ -1,0 +1,69 @@
+# Phase 0: Foundation Setup Progress
+
+This document tracks the completion of tasks outlined in the Phase 0 plan.
+
+-   [x] **1. Monorepo Setup (Nx)**
+    -   [x] Initialize Nx Workspace (`ts` preset)
+    -   [x] Generate Applications (`backend`, `webapp`, `mobileapp`)
+    -   [x] Update Next.js to latest stable (`^15.3.0`)
+    -   [x] Generate Initial Shared Libraries (`libs/shared/types`, `libs/shared/utils`)
+    -   [x] Configure TypeScript path aliases (`@intellizen/shared/*`)
+    -   [x] Create Docs Folder
+-   [ ] **2. Git Setup & Workflow (GitHub Flow)**
+    -   [x] Initialize Git (Done by Nx)
+    -   [x] Initial Commit
+    -   [x] Create GitHub Repository (Done by User)
+    -   [x] Add Remote & Push
+    -   [ ] Document Workflow (Create `CONTRIBUTING.md`)
+    -   [ ] Configure GitHub Branch Protection (Manual Step on GitHub)
+-   [ ] **3. Local Quality Tools (Husky)**
+    -   [ ] Install Dev Dependencies (`husky`)
+    -   [ ] Initialize Husky (`npx husky init`)
+    -   [ ] Configure `pre-commit` Hook (Lint & Format)
+    -   [ ] Make Hook Executable
+    -   [ ] Test Hook
+-   [ ] **4. Linting & Formatting**
+    -   [ ] Verify Configs (`.eslintrc.json`, `prettier.config.js`)
+    -   [ ] Configure Module Boundaries (`@nx/enforce-module-boundaries`)
+    -   [ ] Enforce `no-explicit-any`
+    -   [ ] IDE Integration (Recommendations)
+-   [ ] **5. Core Tech Stack Setup**
+    -   [ ] Review Generated Apps Structure
+    -   [ ] Verify TypeScript Strict Mode
+-   [ ] **6. Database Setup (PostgreSQL w/ Prisma)**
+    -   [ ] Install Prisma
+    -   [ ] Initialize Prisma (in `libs/backend/data-access` or similar)
+    -   [ ] Define Initial Schema (`User`, `Profile`, `Notification` etc.)
+    -   [ ] Set `DATABASE_URL` in `.env`
+    -   [ ] Run Initial Migration (`prisma migrate dev`)
+    -   [ ] Generate/Verify Prisma Client
+-   [ ] **7. API Layer (GraphQL)**
+    -   [ ] Install Dependencies (`@nestjs/graphql`, `@nestjs/apollo`, etc.)
+    -   [ ] Configure `AppModule` (`GraphQLModule.forRoot`)
+    -   [ ] Create Placeholder Resolver/Query
+-   [ ] **8. Infrastructure Basics (AWS & Docker)**
+    -   [ ] AWS Account & IAM (Confirm Access, Document Roles)
+    -   [ ] Create/Refine `docker-compose.yml` (backend, db)
+    -   [ ] Create `apps/backend/Dockerfile` (Multi-stage)
+    -   [ ] Create `.dockerignore`
+    -   [ ] Test Docker Setup (`docker-compose up`)
+-   [ ] **9. CI/CD Pipeline Basics (GitHub Actions)**
+    -   [x] Create Workflow File (`.github/workflows/ci.yml` - Done by Nx)
+    -   [ ] Define Triggers (`push`, `pull_request` to `main`)
+    -   [ ] Define Jobs (`lint`, `test`, `build` using `nx affected`)
+    -   [ ] Link to Branch Protection (Ensure job names match required checks)
+    -   [ ] Trigger & Test
+-   [ ] **10. Storage Setup (S3)**
+    -   [ ] Create S3 Bucket (`intellizen-dev-media`)
+    -   [ ] Configure CORS (If Needed)
+    -   [ ] Local AWS CLI Setup (Ensure developers configured)
+-   [ ] **11. Core Libraries**
+    -   [ ] Install Backend Auth Libs (`@nestjs/passport`, `bcrypt`, etc.)
+    -   [ ] Create Basic Auth Structure (Backend Module/Service/Strategies)
+    -   [ ] Discuss & Decide UI Library
+-   [ ] **12. Secret Management Setup**
+    -   [ ] Select Tool (Doppler, AWS Secrets Manager, etc.) - **Team Decision**
+    -   [ ] Set Up Service
+    -   [ ] Store Initial Secrets
+    -   [ ] Document Local Development Access Process
+    -   [ ] Plan Integration (CI/CD, Deployment)
